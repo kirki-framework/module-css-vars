@@ -13,6 +13,7 @@
 namespace Kirki\Modules\CSS_Vars;
 
 use Kirki\Core\Values;
+use Kirki\Core\Kirki;
 
 /**
  * The Module object.
