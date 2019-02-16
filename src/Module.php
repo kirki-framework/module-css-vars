@@ -146,7 +146,7 @@ class Module {
 	 * @return void
 	 */
 	public function postmessage() {
-		wp_enqueue_script( 'kirki_auto_css_vars', trailingslashit( Kirki::$url ) . 'vendor/kirki-framework/module-css-vars/src/script.js', array( 'jquery', 'customize-preview' ), KIRKI_VERSION, true );
+		wp_enqueue_script( 'kirki_auto_css_vars', trailingslashit( Kirki::$url ) . 'packages/kirki-framework/module-css-vars/src/script.js', array( 'jquery', 'customize-preview' ), KIRKI_VERSION, true );
 		$fields = Kirki::$fields;
 		$data   = array();
 		foreach ( $fields as $field ) {
