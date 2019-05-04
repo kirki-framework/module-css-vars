@@ -175,7 +175,7 @@ class Module {
 	 */
 	public function postmessage() {
 		wp_enqueue_script( 'kirki_auto_css_vars', URL::get_from_path( __DIR__ . '/script.js' ), [ 'jquery', 'customize-preview' ], KIRKI_VERSION, true );
-		$fields = Kirki::$fields;
+		$fields = array_merge( Kirki::$fields, $this->fields );
 		$data   = [];
 		foreach ( $fields as $field ) {
 			if ( isset( $field['transport'] ) && 'postMessage' === $field['transport'] && isset( $field['css_vars'] ) && ! empty( $field['css_vars'] ) ) {
