@@ -99,7 +99,7 @@ class CSS_Vars {
 			foreach ( $args['css_vars'] as $css_var ) {
 				if ( isset( $css_var[2] ) && is_array( $val ) && isset( $val[ $css_var[2] ] ) ) {
 					$this->vars[ $css_var[0] ] = str_replace( '$', $val[ $css_var[2] ], $css_var[1] );
-				} else {
+				} else if ( ! isset( $css_var[2] ) && ! is_array( $val ) ) {
 					$this->vars[ $css_var[0] ] = str_replace( '$', $val, $css_var[1] );
 				}
 			}
